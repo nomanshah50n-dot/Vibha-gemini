@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Vibha Consultancy - Premium Real Estate in Mumbai</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+          content: [],
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#d4af37",
+                "gold": "#d4af37",
+                "cream": "#fdfaf3",
+                "text-dark": "#1a1a1a",
+                "text-muted": "#555555"
+              },
+              fontFamily: {
+                "display": ["Playfair Display"],
+                "body": ["Montserrat"]
+              }
+            }
+          }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;900&display=swap');
+        
+        body {
+            background-color: #fdfaf3;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(24px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .chunky-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            letter-spacing: -0.045em;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -6px;
+            left: 0;
+            background: #d4af37;
+            transition: width 0.4s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .hero-image {
+            transition: transform 0.8s ease;
+        }
+        
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-[#fdfaf3] text-[#1a1a1a] font-body antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="bg-white/95 backdrop-blur-2xl fixed top-0 w-full z-50 border-b border-gold/20">
+        <nav class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="font-display text-4xl tracking-tighter text-gold">Vibha Consultancy</a>
+            
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#about" class="nav-link relative text-text-dark hover:text-gold">About</a>
+                <a href="#advisory" class="nav-link relative text-text-dark hover:text-gold">Advisors</a>
+                <a href="#services" class="nav-link relative text-text-dark hover:text-gold">Services</a>
+                <a href="#contact" class="nav-link relative text-text-dark hover:text-gold">Contact</a>
+            </div>
+            
+            <a href="#contact" class="hidden md:block bg-gold hover:bg-amber-600 transition-all text-white font-semibold px-8 py-3.5 rounded-2xl text-sm tracking-wider">
+                INQUIRE NOW
+            </a>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-3xl text-gold">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-8 px-6">
+            <div class="flex flex-col gap-6 text-lg font-medium">
+                <a href="#about" class="py-2">About</a>
+                <a href="#advisory" class="py-2">Our Advisors</a>
+                <a href="#services" class="py-2">Services</a>
+                <a href="#contact" class="py-2">Contact</a>
+                <a href="#contact" class="bg-gold text-white text-center py-4 rounded-2xl mt-4">INQUIRE NOW</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="relative min-h-screen flex items-center pt-20">
+            <img src="https://images.unsplash.com/photo-1545328803-0f0c2c8f4e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90" 
+                 alt="Mumbai Luxury Skyline" 
+                 class="hero-image absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/80 to-[#fdfaf3]"></div>
+            
+            <div class="relative z-10 max-w-[1280px] mx-auto px-6 md:px-12 text-center w-full">
+                <div class="glass-panel max-w-4xl mx-auto p-8 md:p-16 rounded-3xl">
+                    <h1 class="chunky-headline text-5xl md:text-7xl leading-none mb-8">
+                        Your Premier Real Estate <span class="text-gold">Partner in Mumbai</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-12">
+                        Curating exceptional homes and lucrative investments in Mumbai's most exclusive locations.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                        <a href="#contact" class="bg-gold text-white px-12 py-6 rounded-2xl text-lg font-semibold hover:scale-105 transition-transform">
+                            SCHEDULE CONSULTATION
+                        </a>
+                        <a href="#services" class="border-2 border-gold text-gold hover:bg-gold hover:text-white px-12 py-6 rounded-2xl text-lg font-semibold transition-all">
+                            OUR SERVICES
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-24 md:py-32 px-6 md:px-12 max-w-[1280px] mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90" 
+                         alt="Luxury Mumbai Apartment Interior" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <div>
+                    <span class="uppercase tracking-[0.2em] text-gold font-semibold text-sm">EST. 2012 • MUMBAI</span>
+                    <h2 class="chunky-headline text-5xl md:text-6xl leading-none mt-6 mb-10">
+                        Crafting Mumbai's Most Prestigious Real Estate Legacy
+                    </h2>
+                    <p class="text-lg text-text-muted leading-relaxed">
+                        With over 13 years of excellence, Vibha Consultancy is the trusted advisor for high-net-worth individuals seeking luxury residences, investment properties, and commercial spaces across South Mumbai, Bandra, Worli, Lower Parel, and Juhu.
+                    </p>
+                    <div class="grid grid-cols-3 gap-8 mt-12">
+                        <div>
+                            <div class="text-5xl font-bold text-gold">15+</div>
+                            <div class="uppercase text-sm tracking-widest mt-2">Years</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-gold">500+</div>
+                            <div class="uppercase text-sm tracking-widest mt-2">Clients</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-gold">1.2K</div>
+                            <div class="uppercase text-sm tracking-widest mt-2">Properties</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVISORS -->
+        <section id="advisory" class="py-24 md:py-32 bg-white">
+            <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <span class="uppercase text-gold tracking-widest font-semibold">MEET THE EXPERTS</span>
+                    <h2 class="chunky-headline text-5xl md:text-6xl mt-4">Your Trusted Advisors</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="glass-card rounded-3xl overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Priya Sharma" class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold">Priya Sharma</h3>
+                            <p class="text-gold font-medium">Senior Principal Advisor</p>
+                            <p class="mt-4 text-text-muted text-sm">15+ years in luxury residential sales. Specialist in South Mumbai & Bandra properties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-3xl overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Arjun Mehra" class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold">Arjun Mehra</h3>
+                            <p class="text-gold font-medium">Investment Director</p>
+                            <p class="mt-4 text-text-muted text-sm">Former investment banker. Expert in pre-leased assets and redevelopment projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-3xl overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1580894732441-5c8e3c4f7f2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Meera Kapoor" class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold">Meera Kapoor</h3>
+                            <p class="text-gold font-medium">Leasing &amp; Client Relations</p>
+                            <p class="mt-4 text-text-muted text-sm">Specialist in premium rentals and creating seamless client experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="py-24 md:py-32 px-6 md:px-12 max-w-[1280px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-widest text-gold font-semibold">EXPERTISE</span>
+                <h2 class="chunky-headline text-5xl md:text-6xl mt-4">Bespoke Real Estate Solutions</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-10 rounded-3xl">
+                    <span class="material-symbols-outlined text-6xl text-gold">real_estate_agent</span>
+                    <h3 class="text-3xl font-bold mt-8 mb-4">Buying</h3>
+                    <p class="text-text-muted">Curated selection of off-market luxury homes and prime investment opportunities.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl">
+                    <span class="material-symbols-outlined text-6xl text-gold">sell</span>
+                    <h3 class="text-3xl font-bold mt-8 mb-4">Selling</h3>
+                    <p class="text-text-muted">Discreet, high-impact marketing to achieve the best possible value for your property.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl">
+                    <span class="material-symbols-outlined text-6xl text-gold">key</span>
+                    <h3 class="text-3xl font-bold mt-8 mb-4">Leasing</h3>
+                    <p class="text-text-muted">Premium rental services for luxury apartments, villas & corporate spaces.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl">
+                    <span class="material-symbols-outlined text-6xl text-gold">trending_up</span>
+                    <h3 class="text-3xl font-bold mt-8 mb-4">Investments</h3>
+                    <p class="text-text-muted">High-yield pre-leased commercial assets and strategic redevelopment projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-24 md:py-32 bg-white px-6 md:px-12">
+            <div class="max-w-[1280px] mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="chunky-headline text-5xl md:text-6xl leading-none mb-8">Let's Build Your Mumbai Legacy Together</h2>
+                        <p class="text-2xl text-text-muted">Get personalized guidance from our senior advisors.</p>
+                        
+                        <form id="contact-form" class="mt-12 space-y-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" placeholder="Full Name" required class="w-full px-8 py-6 rounded-2xl border border-gold/30 focus:border-gold text-lg outline-none">
+                                <input type="tel" placeholder="Phone Number" required class="w-full px-8 py-6 rounded-2xl border border-gold/30 focus:border-gold text-lg outline-none">
+                            </div>
+                            <input type="email" placeholder="Email Address" required class="w-full px-8 py-6 rounded-2xl border border-gold/30 focus:border-gold text-lg outline-none">
+                            <textarea placeholder="Tell us about your property requirements..." rows="5" class="w-full px-8 py-6 rounded-3xl border border-gold/30 focus:border-gold text-lg outline-none resize-y"></textarea>
+                            <button type="submit" class="w-full bg-gold text-white py-7 text-xl font-semibold rounded-3xl hover:scale-105 transition-transform">
+                                SEND CONFIDENTIAL INQUIRY
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="lg:pt-12">
+                        <div class="glass-panel p-12 rounded-3xl">
+                            <h3 class="text-2xl font-semibold mb-8">Visit Our Office</h3>
+                            <div class="space-y-8 text-lg">
+                                <div class="flex gap-5">
+                                    <span class="material-symbols-outlined text-4xl text-gold">location_on</span>
+                                    <div>Bandra Kurla Complex<br>Mumbai, Maharashtra 400051</div>
+                                </div>
+                                <div class="flex gap-5">
+                                    <span class="material-symbols-outlined text-4xl text-gold">phone</span>
+                                    <div>+91 98200 12345</div>
+                                </div>
+                                <div class="flex gap-5">
+                                    <span class="material-symbols-outlined text-4xl text-gold">mail</span>
+                                    <div>hello@vibhaconsultancy.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white py-20">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between gap-12">
+                <div>
+                    <div class="text-gold text-4xl font-display">Vibha Consultancy</div>
+                    <p class="text-gray-400 mt-4 max-w-xs">Mumbai's most trusted luxury real estate advisor since 2012.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10">
+                    <div>
+                        <div class="uppercase text-gold tracking-widest mb-6">Company</div>
+                        <a href="#about" class="block hover:text-gold py-1">About</a>
+                        <a href="#advisory" class="block hover:text-gold py-1">Advisors</a>
+                    </div>
+                    <div>
+                        <div class="uppercase text-gold tracking-widest mb-6">Services</div>
+                        <a href="#services" class="block hover:text-gold py-1">Buying</a>
+                        <a href="#services" class="block hover:text-gold py-1">Selling</a>
+                        <a href="#services" class="block hover:text-gold py-1">Leasing</a>
+                        <a href="#services" class="block hover:text-gold py-1">Investments</a>
+                    </div>
+                    <div>
+                        <div class="uppercase text-gold tracking-widest mb-6">Contact</div>
+                        <a href="#contact" class="block hover:text-gold py-1">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-xs text-gray-500 mt-20 pt-8 border-t border-white/10">
+                © 2026 Vibha Consultancy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const topPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: topPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Our team will contact you within 24 hours.");
+            this.reset();
+        });
+    </script>
+</body>
+  </html>
